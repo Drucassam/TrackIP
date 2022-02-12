@@ -2,11 +2,14 @@
 
 Keep track of the IP addresses that are making the most requests.
 
-request_handled(ip_address)
-This function accepts a string containing an IP address like “145.87.2.109”, saves it along with the number of requests made by it.
+## request_handled(ip_address)
+This function adds the IP address to the IP list if it still not there or updates the requests count if the IP is already on the list. The function also calls “updateTopList” to update the top 100 list.
 
-top100()
-This function returns the top 100 IP addresses by request count, with the highest traffic IP address first.
+## updateTopList(ip_address, requests)
+This function is responsible to maintain the top 100 IPs with the most requests.
 
-clear()
-Clears ip lists.
+## top100()
+Returns the top 100 IP addresses by request count, with the highest traffic IP address first.
+
+## clear()
+Clears the IP lists.
